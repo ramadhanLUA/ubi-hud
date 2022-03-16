@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+
+body {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently */
+    overflow: hidden;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+@media screen  {
+    .hud-container {
+        display: inline-flex;
+        position: absolute;
+        bottom: .20%;
+        left: -0.70%;
+    }
+
+    .radial-progress {
+        padding: 3.5px;
+        transform: rotate(-90deg);
+    }
+
+    .complete {
+        opacity: 0.4;
+        
+    }
+
+    .radial-progress image {
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg) rotate(-180deg);
+    }
+}
+
+.BaseCircle {
+    position: relative;
+    width: 2.7vh !important;
+    height: 2.7vh !important;
+    margin: 0.3vh;
+    float: left;
+    border: 8px solid #000000;
+    border-radius: 100%;
+    background: rgba(49, 49, 49, 0.6);
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+
+
+@media screen {
+    .hud-container {
+        display: inline-flex;
+        position: absolute;
+        bottom: .20%;
+        left: -0.10%;
+    }
+
+    .radial-progress {
+        padding: 3.5px;
+        transform: rotate(-90deg);
+    }
+
+    .complete {
+        opacity: 0.7;
+    }
+
+    .radial-progress image {
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg) rotate(-180deg);
+    }
+}
+
+.transmitting {
+    stroke: #EE2727 !important;
+}
+
+.transmitting2 {
+    fill: #C05D5D !important;
+}
+
+#settings-container {
+    position: absolute;
+    background: #30475e;
+    width: 35%;
+    height: 500px;
+    top: 0.1%;
+    left: 32.5%;
+    border-radius: 5px;
+    font-family: 'Exo 2', sans-serif; 
+}
+
+#settings-container #sub-container {
+    display: inline-block;
+    position: absolute;
+    background: #191e25;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 75%;
+    height: 500px;
+    top: 0;
+    left: 25%; 
+}
+
+#settings-container .menu-hud {
+    color: white;
+    padding: 10px 10px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    font-size: 1.5vh;
+    background-color: #191e25;
+}
+
+.checkbox-container {
+    padding: 15px 20px;
+}
+
+.sub-title {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    top: 7%;
+    left: 1.5%;
+    color: #656565;
+    font-family: 'Exo 2', sans-serif;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    display: inline-block;
+    padding-top: .50rem;
+    transition: .2s ease-in-out;
+    font-size: 1.2vh;
+}
+
+.checkbox-container input[type="number"] {
+    position: absolute;
+    left: 50%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid  white;
+    color: #afafaf;
+    line-height: 1.5;
+    padding: 5px;
+    background: transparent;
+    transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
+    transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+}
+
+.checkbox-container input[type="number"]::-webkit-outer-spin-button,
+.checkbox-container input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fa-microphone {
+    color: white;
+    position: absolute;
+    font-size: 1.9vh;
+    left: 1.7vh;
+    bottom: 1.85vh;
+}
+
+.fa-align-justify  {
+    color: white;
+    position: absolute;
+    font-size: 1.7vh;
+    left: 17.2vh;
+    bottom: 1.2vh;
+  }
+
+.fa-tint {
+    color: white;
+    position: absolute;
+    font-size: 1.9vh;
+    left: 16.2vh;
+    bottom: 1.85vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #2F455E; 
+}
+
+#btn-save {
+    position: absolute;
+    top: 5%;
+    left: 84%;
+    outline: none;
+    line-height: 1.5;
+    border: 1px solid hsl(0, 0%, 10%);
+    color: white;
+    background: rgb(104, 159, 56);
+    padding: 3.5px 15px;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+#btn-save:hover {
+    transform: scale(1.1);
+}
+
+.profiles {
+    position: relative;
+    padding: 15px;
+    top: 3.5%;
+    left: 1.5%;
+    color: #656565;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.speedamount {
+    position: relative;
+    bottom: 100%;
+    font-size: 15;
+    text-align: center;
+    margin-right: 1540px;
+}
+
+.speedamount .stat {
+    background: linear-gradient(to top, #5b5b5b 90%, #1bd295 90%);
+    text-align: right;
+}
+
+.speedamount .stat span {
+    white-space: nowrap;
+    right: 20px;
+}
+
+.progress {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    transform: rotate(140deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.progress2 {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+.progress3 {
+    -webkit-transition: 0.35s stroke-dashoffset;
+    -o-transition: 0.35s stroke-dashoffset;
+    transition: 0.35s stroke-dashoffset;
+    -webkit-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    transform: rotate(120deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+
+
+.backgroundCircle,
+.outer {
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+#SpeedCircle {
+    width: 5vh !important;
+    height: 5vh !important;
+    position: absolute;
+    font-size: 5vh;
+    left: 22.8vh;
+    bottom: 5.6vh;
+    background: rgba(27, 27, 27, 0.336);
+    transform: rotate(-180deg);
+}
+
+#SpeedIndicator {
+    color: white;
+    position: inherit;
+    z-index: 1000;
+    left: 1vh;
+    top: 0.1vh;
+    width: 3vh;
+    font-size: 2vh;
+    text-align: center;
+    text-shadow: 0.2vh 0.2vh 0vh rgb(22, 22, 22);
+    transform: rotate(-180deg);
+}
+
+#SpeedGauge {
+    position: relative;
+    width: 5.1vw;
+    height: 2vh;
+    margin-top: 20px;
+    margin-right: -10px;
+    filter: drop-shadow(0px 0px 5px black);
+    
+}
+
+#tinggiGauge {
+    position: relative;
+    width: 5.1vw;
+    height: 2vh;
+    margin-top: 20px;
+    margin-right: -10px;
+    filter: drop-shadow(0px 0px 5px black);
+    
+}
+
+.speedSVG {
+    position: absolute;
+    bottom: 5vh;
+    left: 15vw;
+}
+
+.tinggiSVG {
+    position: absolute;
+    bottom: 5vh;
+    left: 19vw;
+}
+
+.speedometerPost {
+    position: absolute;
+    bottom: 0.1vh;
+    left: 0.1vw;
+}
+
+.Speed_Meter {
+     display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5vh;
+    right: 32.982vw;
+    top: 40.75vh;
+    font-size: 1.5vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vh;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.tinggi_Meter {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 5vh;
+    right: 28.782vw;
+    top: 40.75vh;
+    font-size: 1.5vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4vh;
+    font-weight: bold;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+
+.mph {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0vh;
+    font-weight: bold;
+    color: white;
+    height: 1.0vh;
+    bottom: 7.4vh;
+    left: 16.37vw;
+}
+
+.ALT {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.0vh;
+    font-weight: bold;
+    color: white;
+    height: 1.0vh;
+    bottom: 7.1vh;
+    left: 20.37vw;
+ }
+
+
+.outline {
+	position: fixed;
+	bottom: 7.7vh;
+	left: 1.1vh;
+	overflow: hidden; 
+	width: 29.529vh;
+	text-align: center;
+}
+/* .mapborder {
+    width: 26.25vh;
+    height: 21.5vh;
+    border: 0.45vh solid rgba(230, 230, 230, 0.85);
+    border-radius: 100%;
+    position: relative;
+    right: 0.06vh;
+    top: 0.65vh;
+    display: inline-block;
+  } */
+  .mapborder {
+    width: 24.25vh;
+    height: 21.5vh;
+    border: 0.45vh solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    position: relative;
+    right: 2.8vh;
+    top: 2.75vh;
+    display: inline-block;
+  }
+
+.fuel {
+    position: absolute;
+    bottom: 4.7vh;
+    left: 17.3vw;
+}
+
+.fa-terminal {
+    color: white;
+    position: absolute;
+    font-size: 1.4vh;
+    left: 0.5vh;
+    bottom: 0.8vh;
+  }
+
+
+  .fa-headset {
+    color: white;
+    position: absolute;
+    font-size: 1.8vh;
+    left: 1.5vh;
+    bottom: 1.85vh;
+    }
+
+#FuelCircle {
+    width: 3vh !important;
+    height: 3vh !important;
+    position: absolute;
+    left: 20.4vh;
+    bottom: 4.2vh;
+    background: rgba(27, 27, 27, 0.336);
+    transform: rotate(-180deg);
+}
+
+.Gas_gauge {
+    position: absolute;
+    bottom: 1vh;
+    width: 2.5vw;
+    height: 1vh;
+    filter: drop-shadow(0px 0px 5px black)
+}
+
+.Gas_Icon {
+    position: absolute;
+    bottom: 1.60vh;
+    left: 0.75vw;
+    font-size: 0.1vh;
+    color: white;
+    filter: drop-shadow(0px 0px 5px black)
+} 
+
+.fa-gas-pump {
+    color: white;
+    font-size: 1.1vh;
+}
